@@ -1,0 +1,24 @@
+:root {
+  --bg-color: #fff;
+  --code-bg-color: #D7E3FC;
+  --text-color: #5F5F5F;
+  --code-color: #000;
+  --border-color: #ddd;
+  --bs-bg-color: #fff;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg-color: #1a1919;
+    --code-bg-color: #000;
+    --text-color: #bdc1c6;
+    --code-color: rgb(209, 209, 209);
+    --border-color: rgb(70, 70, 70);
+    --bs-bg-color: #2c2b2b;
+  }
+}
+
+html, body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
