@@ -15,6 +15,8 @@
     <link href="css/bs-example.css" rel="stylesheet">
     <link href="css/crew-specific.css" rel="stylesheet">
 
+    <script src="js/embed_template.js" defer></script>
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="../../assets/js/html5shiv.js"></script>
@@ -81,7 +83,7 @@
         <div class="col-12">
           <div class="bs-example bs-example-type">
             <h4>Install Chromebrew (along with Ruby and Git).</h4>
-            <h5>Supported on Chrome OS systems running on an ARM (ARMv7+) or x86-64 processor.</h5>
+            <h5>Supported on Chrome OS systems running on an ARM (ARMv7+), legacy 32-bit x86 (without GUI support) or x86-64 processor.</h5>
           </div>
           <div class="highlight">
             <pre><code>curl -Ls git.io/vddgY | bash</code></pre>
@@ -112,14 +114,13 @@
         </p>
         <h3>Is GUI supported?</h3>
           <p>
-            Chromebrew supports most GUI apps with help from the sommelier daemon. We don't support i686 architecture, due to Google dropping support.
+            Chromebrew supports most GUI apps with help from the sommelier daemon. We don't support legacy 32-bit x86 architecture, due to Google dropping support.
         </p>
         <h3 id="howcanihelp">How can I help?</h3>
         <p>
           If you have a compatible Chromebook, you can fork my Github repo and add new packages to the <code>packages/</code> directory if you managed to build them from source successfully on your device. Package recipes are simple Ruby files - here is an example:
         </p>
         <script id="embed_template"></script>
-        <script src="js/embed_template.js"></script>
       </div>
 
       <div class="footer">
