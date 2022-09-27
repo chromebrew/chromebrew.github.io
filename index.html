@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
     <link rel="shortcut icon" href="images/brew-title.png" type="image/png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The missing package manager for Chrome OS">
@@ -11,6 +11,7 @@
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/jumbotron-narrow.css" rel="stylesheet">
+    <link href="css/theme.css" rel="stylesheet">
     <link href="css/bs-example.css" rel="stylesheet">
     <link href="css/crew-specific.css" rel="stylesheet">
 
@@ -24,18 +25,12 @@
   <body>
     <div class="container">
       <ul>
-        <a href="https://github.com/skycocker/chromebrew"><img class="forkme" src="images/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+        <a href="https://github.com/chromebrew/chromebrew"><img class="forkme" src="images/forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
       </ul>
 
       <div class="jumbotron">
         <div class="center">
-          <img id="crew-icon" src="images/brew.png" alt="centered image" width="29%" height="29%">
-          <script>
-            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-              // use brew-title.png (with transparent background) when in dark mode
-              document.getElementById('crew-icon').src = 'images/brew-title.png'
-            }
-          </script>
+          <img id="crew-icon" src="images/brew.png" alt="centered image" width="32%" height="32%">
         </div>
         <h1>Chromebrew</h1>
         <p class="lead">The missing package manager for Chrome OS</p>
@@ -86,7 +81,7 @@
         <div class="col-12">
           <div class="bs-example bs-example-type">
             <h4>Install Chromebrew (along with Ruby and Git).</h4>
-            <h5>Available on aarch64, armv7l, i686 and x86_64.</h5>
+            <h5>Supported on Chrome OS systems running on an ARM (ARMv7+) or x86-64 processor.</h5>
           </div>
           <div class="highlight">
             <pre><code>curl -Ls git.io/vddgY | bash</code></pre>
@@ -123,92 +118,13 @@
         <p>
           If you have a compatible Chromebook, you can fork my Github repo and add new packages to the <code>packages/</code> directory if you managed to build them from source successfully on your device. Package recipes are simple Ruby files - here is an example:
         </p>
-        <pre># It is recommended that you investigate other files in the 'packages/' directory
-# to help get an idea of how existing packages are being installed through Chromebrew.
+        <script id="embed_template"></script>
+        <script src="js/embed_template.js"></script>
+      </div>
 
-require 'package'
-
-class Template &lt; Package
-  description ''
-  homepage ''
-  version ''
-  license '' # Package license
-  compatibility '' # Package compatibility
-  source_url '*.tar.{gz,bz2,lz,etc}'
-  source_sha256 ''
-
-# Optional: Prebuilt binary
-#  binary_url ({
-#    aarch64: '',
-#     armv7l: '',
-#       i686: '',
-#     x86_64: '',
-#  })
-#  binary_sha256 ({
-#    aarch64: '',
-#     armv7l: '',
-#       i686: '',
-#     x86_64: '',
-#  })
-
-
-  # Register dependencies (use the following line as a basis)
-  #
-  # depends_on '*'
-  #
-
-  # Function for checks to see if install should occur.
-  def self.preflight
-
-  end
-
-  # Function to perform pre-install operations prior to install for both source build and binary distribution.
-  def self.preinstall
-
-  end
-
-
-  # Function to perform patch operations prior to build from source.
-  def self.patch
-
-  end
-
-
-  # Function to perform build from source.
-  def self.build
-
-  end
-
-  # Function to perform pre-install operations prior to install.
-  def self.preinstall
-
-  end
-
-  # Function to perform install from source build.
-  def self.install
-
-  end
-
-
-  # Function to perform post-install for both source build and binary distribution
-  def self.postinstall
-
-  end
-
-
-  # Function to perform check from source build.
-  # This is execute if and only if `crew build`.
-  def self.check
-
-  end
-
-
-end
-</pre>
-        <p></p>
-      
       <div class="footer">
         <pre>© 2013-2022 Michal Siwek</pre>
       </div>
     </div> <!-- /container -->
-</body></html>
+  </body>
+</html>
