@@ -57,8 +57,6 @@ pre.can-copy::before {
   bottom: -100%;
 }
 
-
-
 pre.can-copy:hover::before {
   opacity: 1;
 }
