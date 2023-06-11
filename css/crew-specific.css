@@ -60,3 +60,7 @@ pre.can-copy::before {
 pre.can-copy:hover::before {
   opacity: 1;
 }
+
+.first_heading {
+  margin-top: 0;
+}
