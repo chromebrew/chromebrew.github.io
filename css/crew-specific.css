@@ -1,5 +1,5 @@
-.forkme {
-  position: absolute; top: 0; right: 0; border: 0;
+.github-fork-ribbon::before {
+  background-color: #6d6d6d;
 }
 
 .footer {
@@ -22,6 +22,7 @@
 }
 
 .container .jumbotron {
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
   background-color: var(--bg-color);
   color: var(--text-color);
 }
@@ -30,4 +31,36 @@
   background-color: var(--code-bg-color);
   color: var(--code-color);
   border: var(--border-color);
+}
+
+table.hljs-ln > tbody > tr > td {
+  white-space: pre;
+  overflow-x: scroll;
+}
+
+pre.can-copy {
+  position: relative;
+  cursor: pointer;
+}
+
+pre.can-copy::before {
+  opacity: 0;
+  color: var(--toast-text-color);
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 1.4rem;
+  transition: opacity 0.1s ease-in-out;
+  padding: 7px 10px 7px 10px;
+  border-radius: 10px;
+  background-color: var(--toast-bg-color);
+  content: attr(data-before);
+  position: absolute;
+  bottom: -100%;
+}
+
+pre.can-copy:hover::before {
+  opacity: 1;
+}
+
+.first_heading {
+  margin-top: 0;
 }

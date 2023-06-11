@@ -1,8 +1,13 @@
 :root {
   --bg-color: #fff;
-  --code-bg-color: #D7E3FC;
   --text-color: #5F5F5F;
+
+  --code-bg-color: #D7E3FC;
   --code-color: #000;
+
+  --toast-bg-color: rgba(219, 219, 219, 0.707);
+  --toast-text-color: black;
+
   --border-color: #ddd;
   --bs-bg-color: #fff;
 }
@@ -10,9 +15,14 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --bg-color: #1a1919;
-    --code-bg-color: #000;
     --text-color: #bdc1c6;
+
+    --code-bg-color: #000;
     --code-color: rgb(209, 209, 209);
+
+    --toast-bg-color: rgba(80, 80, 80, 0.742);
+    --toast-text-color: rgba(255, 255, 255, 0.8);
+
     --border-color: rgb(70, 70, 70);
     --bs-bg-color: #2c2b2b;
   }
